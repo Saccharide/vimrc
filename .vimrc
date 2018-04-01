@@ -26,6 +26,14 @@ inoremap [<cr> [<cr>]<c-o><s-o>
 inoremap (<cr> (<cr>)<c-o><s-o>
 
 
+" Make sure Vim returns to the same line when you reopen a file.
+augroup line_return
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \       execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
 let python_hightlight_all = 1
 
 
