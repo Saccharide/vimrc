@@ -34,6 +34,10 @@ augroup line_return
         \       execute 'normal! g`"zvzz' |
         \ endif
 augroup END
+
+" When useing search, the screen would always center on the current word
+nnoremap n nzzzv
+nnoremap N Nzzzv
 let python_hightlight_all = 1
 
 
