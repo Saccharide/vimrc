@@ -5,18 +5,19 @@ set ts=4 sw=4 sts=4 et
 
 " auto indent
 set autoindent
+let mapleader = ","
+noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
 
 " set cursorline
 
-set smartindent
 set expandtab
 set showmatch
-
-
+" Smart indent!
+set breakindent
 set background=dark
 set cindent
 set cursorline
-
+set hlsearch
 " Non invasive highlight
 hi CursorLine   cterm=NONE ctermbg=8 ctermfg=NONE
 
