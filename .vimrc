@@ -66,5 +66,6 @@ set foldlevel=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap j to k
-nnoremap j k
-nnoremap k j
+" Maybe this is not a good idea, but it seems more inutive
+" nnoremap j k
+" nnoremap k j
