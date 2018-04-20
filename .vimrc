@@ -75,3 +75,16 @@ highlight Comment cterm=italic
 " Maybe this is not a good idea, but it seems more inutive
 " nnoremap j k
 " nnoremap k j
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TRAINING 
+no <up> <Nop> 
+no <down> <Nop> 
+no <left> <Nop> 
+no <right> <Nop> 
+
+ino <up> <Nop> 
+ino <down> <Nop> 
+ino <left> <Nop> 
+ino <right> <Nop> 
