@@ -65,6 +65,12 @@ set nofoldenable
 set foldlevel=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Make comment italic
+set t_ZH=[3m
+set t_ZR=[23m
+highlight Comment cterm=italic
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap j to k
 " Maybe this is not a good idea, but it seems more inutive
 " nnoremap j k
