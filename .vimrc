@@ -1,11 +1,17 @@
 
+
+execute pathogen#infect()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " @title            .vimrc
 " @description      Personal vimrc file
 " @author           sachharide
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set number
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set relative and absolute number
+set number rnu 
+
 set background=dark
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabs
@@ -55,7 +61,9 @@ augroup END
 " The screen would always center on the current word
 nnoremap n nzzzv
 nnoremap N Nzzzv
-
+nmap     G Gzz
+nmap     } }zz
+nmap     } {zz
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
@@ -88,3 +96,4 @@ ino <up> <Nop>
 ino <down> <Nop> 
 ino <left> <Nop> 
 ino <right> <Nop> 
+
