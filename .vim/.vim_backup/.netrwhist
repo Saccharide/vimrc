@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/greyokra/.gconf'
-let g:netrw_dirhist_2='/home/greyokra/.vim'
-let g:netrw_dirhist_3='/home/tony/Desktop/Mobile_App/apps/Money On Mobile'
-let g:netrw_dirhist_4='/home/tony/Desktop/Mobile_App/apps/GCash'
-let g:netrw_dirhist_5='/home/tony/git/Notification-with-Android'
-let g:netrw_dirhist_6='/home/tony/Desktop/Mobile_App/apps/Money On Mobile'
-let g:netrw_dirhist_7='/home/tony/.vim'
