@@ -17,14 +17,13 @@ set background=dark
 " Tabs
 set ts=4 sw=4 sts=4 et
 set expandtab
-
-
+syntax on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent configs
 set autoindent
 set breakindent
 set cindent
-filetype indent on
+" filetype indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader configs
@@ -37,8 +36,13 @@ noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
 set showmatch
 set cursorline
 set hlsearch
-hi CursorLine   cterm=NONE ctermbg=8 ctermfg=NONE
 
+" Fixed the value of ctermbg, xterm256color take a 3 digit value
+hi CursorLine cterm=NONE ctermbg=238 ctermfg=NONE
+
+" hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white
+
+highlight Normal ctermbg=black
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Auto complete brackets 
