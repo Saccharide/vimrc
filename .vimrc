@@ -96,7 +96,14 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" no one types jj, so you can use it to exit insert!
+inoremap jj <Esc>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remapped to easily move around normal view
+nnoremap ; <End>
+nnoremap ` <Home>h 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TRAINING 
 no <up> <Nop> 
