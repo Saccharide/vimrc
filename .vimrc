@@ -102,8 +102,16 @@ inoremap jj <Esc>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remapped to easily move around normal view
-nnoremap ; <End>
+nnoremap ; :
+nnoremap : ;
+
+nnoremap : <End>
 nnoremap ` <Home>h 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Centers the screen whenever I jump to another line
+nnoremap <C-o> <C-o>zz
+nnoremap <C-i> <C-i>zz
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TRAINING 
 no <up> <Nop> 
