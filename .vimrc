@@ -5,15 +5,19 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " @title            .vimrc
 " @description      Personal vimrc file
-" @author           sachharide
+" @author           Saccharide
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Environment Setup
+set nocompatible
+set background=dark
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Automatical save before running a command
+set autowrite
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set relative and absolute number
 set number rnu 
-
-set nocompatible
-set background=dark
+set ruler 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabs
 set ts=4 sw=4 sts=4 et
@@ -22,10 +26,12 @@ syntax on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent configs
 set autoindent
+set smartindent
 set breakindent
-set cindent
+" set cindent
 " filetype indent on
-
+" FIXES auto dedent when commenting with smartindent
+inoremap # X#
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader configs
 let mapleader = ","
@@ -37,6 +43,8 @@ noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
 set showmatch
 set cursorline
 set hlsearch
+" Incremental search
+set incsearch 
 
 " Fixed the value of ctermbg, xterm256color take a 3 digit value
 hi CursorLine cterm=NONE ctermbg=238 ctermfg=NONE
@@ -64,8 +72,8 @@ augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The screen would always center on the current word
-nnoremap n nzzzv
-nnoremap N Nzzzv
+nnoremap n nzz
+nnoremap N Nzz
 nmap     G Gzz
 nmap     } }zz
 nmap     } {zz
@@ -98,27 +106,30 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" no one types jj, so you can use it to exit insert!
+" No one types jj, so you can use it to exit insert!
 inoremap jj <Esc>
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FINALLY FOUND THIS FEATURE!
+" Map j and k to move to next visual line
+noremap j gj
+noremap k gk
+
+noremap Y y$
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " IT WILL CENTER THE SCREEN WHENEVER I MAKE A JUMP!
-" FANTASTIC!
 function! s:Center_JUMP(key)
     return a:key . (v:count > 1 ? 'zz' : '')
 endfunction
 
-noremap <silent> <expr> j <sid>Center_JUMP('j')
-noremap <silent> <expr> k <sid>Center_JUMP('k')
+noremap <silent> <expr> j <sid>Center_JUMP('gj')
+noremap <silent> <expr> k <sid>Center_JUMP('gk')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remapped to easily move around normal view
 nnoremap ; :
-nnoremap : ;
+nnoremap : $
 
-nnoremap : <End>
-nnoremap ` <Home>h 
+" nnoremap : <End>
+noremap ` ^h 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Centers the screen whenever I jump to another line
 nnoremap <C-o> <C-o>zz
