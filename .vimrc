@@ -1,16 +1,15 @@
-
-
-execute pathogen#infect()
-runtime bundle/vim-pathogen/autoload/pathogen.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " @title            .vimrc
 " @description      Personal vimrc file
 " @author           Saccharide
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Environment Setup
+execute pathogen#infect()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
 set nocompatible
 set background=dark
-
+set title
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Automatical save before running a command
 set autowrite
@@ -105,6 +104,9 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Splits below and split right instead of the default
+set splitbelow
+set splitright
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " No one types jj, so you can use it to exit insert!
 inoremap jj <Esc>
@@ -115,6 +117,11 @@ noremap j gj
 noremap k gk
 
 noremap Y y$
+" Select current line! (only characters)
+nnoremap vv ^vg_
+" gi already moves to last place you exited insert mode
+" so we'll map gI to move to last change
+nnoremap gI `.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " IT WILL CENTER THE SCREEN WHENEVER I MAKE A JUMP!
 function! s:Center_JUMP(key)
@@ -128,6 +135,8 @@ noremap <silent> <expr> k <sid>Center_JUMP('gk')
 nnoremap ; :
 nnoremap : $
 
+" Substitute
+" nnoremap <C-s> :%s
 " nnoremap : <End>
 noremap ` ^h 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
