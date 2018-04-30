@@ -12,6 +12,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Set relative and absolute number
 set number rnu 
 
+set nocompatible
 set background=dark
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabs
@@ -100,6 +101,17 @@ map <C-l> <C-W>l
 " no one types jj, so you can use it to exit insert!
 inoremap jj <Esc>
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FINALLY FOUND THIS FEATURE!
+" IT WILL CENTER THE SCREEN WHENEVER I MAKE A JUMP!
+" FANTASTIC!
+function! s:Center_JUMP(key)
+    return a:key . (v:count > 1 ? 'zz' : '')
+endfunction
+
+noremap <silent> <expr> j <sid>Center_JUMP('j')
+noremap <silent> <expr> k <sid>Center_JUMP('k')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remapped to easily move around normal view
 nnoremap ; :
