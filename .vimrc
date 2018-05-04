@@ -52,7 +52,7 @@ hi CursorLine cterm=NONE ctermbg=238 ctermfg=NONE
 
 " hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white
 
-highlight Normal ctermbg=black
+" highlight Normal ctermbg=black
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Auto complete brackets 
