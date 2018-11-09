@@ -26,7 +26,7 @@ syntax on
 " Indent configs
 set autoindent
 set smartindent
-set breakindent
+" set breakindent
 " set cindent
 " filetype indent on
 " FIXES auto dedent when commenting with smartindent
@@ -156,3 +156,6 @@ ino <down> <Nop>
 ino <left> <Nop> 
 ino <right> <Nop> 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set Toggle paste
+set pastetoggle=<F2>
