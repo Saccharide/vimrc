@@ -10,6 +10,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 set nocompatible
 set background=dark
 set title
+set textwidth=75
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Automatical save before running a command
 set autowrite
