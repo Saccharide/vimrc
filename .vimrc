@@ -27,12 +27,9 @@ syntax on
 " Maintain exisiting indentation
 set autoindent
 set smartindent
-<<<<<<< HEAD
 " set breakindent
-=======
 " Maintain indentation for warpped line
 set breakindent
->>>>>>> b5f8021947831655d2758c0c610f02b44b1c6099
 " set cindent
 " filetype indent on
 " FIXES auto dedent when commenting with smartindent
