@@ -10,7 +10,6 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 set nocompatible
 set background=dark
 set title
-set textwidth=75
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Automatical save before running a command
 set autowrite
@@ -30,8 +29,7 @@ set autoindent
 set smartindent
 " set breakindent
 " Maintain indentation for warpped line
-set breakindent
-" set cindent
+set cindent
 " filetype indent on
 " FIXES auto dedent when commenting with smartindent
 inoremap # X#
@@ -201,3 +199,18 @@ set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
 " Set Toggle paste
 set pastetoggle=<F2>
 
+" Set Toggle textwidth
+let g:toggleText=0
+nnoremap <F3> :call SetTextwidth()<CR>
+
+function! SetTextwidth()
+     if g:toggleText == 0
+         set textwidth=75
+         let g:toggleText=75
+         echo g:toggleText
+     else
+         set textwidth=0
+         let g:toggleText=0
+         echo g:toggleText
+     endif
+endfunction
