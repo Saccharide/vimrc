@@ -93,13 +93,6 @@ set t_ZR=[23m
 highlight Comment cterm=italic
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap j to k
-" Maybe this is not a good idea, but it seems more inutive
-" nnoremap j k
-" nnoremap k j
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mapping <ctrl> h,j,k,l to move between panels
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -110,6 +103,7 @@ map <C-l> <C-W>l
 set splitbelow
 set splitright
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " No one types jj, so you can use it to exit insert!
 inoremap jj <Esc>
 
@@ -153,10 +147,11 @@ no <down> <Nop>
 no <left> <Nop> 
 no <right> <Nop> 
 
-ino <up> <Nop> 
-ino <down> <Nop> 
-ino <left> <Nop> 
-ino <right> <Nop> 
+" In insert mode, map arrow keys to no op, training 
+" ino <up> <Nop> 
+" ino <down> <Nop> 
+" ino <left> <Nop> 
+" ino <right> <Nop> 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Word Count Function
