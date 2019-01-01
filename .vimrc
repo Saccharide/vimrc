@@ -194,6 +194,9 @@ set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
 " Set Toggle paste
 set pastetoggle=<F2>
 
+" Set Toggle spell check
+map <F4> :setlocal spell! spelllang=en_us<CR>
+
 " Set Toggle textwidth
 let g:toggleText=0
 nnoremap <F3> :call SetTextwidth()<CR>
