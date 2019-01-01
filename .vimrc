@@ -9,6 +9,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 set nocompatible
 set background=dark
+autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
 set title
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Automatical save before running a command
@@ -195,7 +196,7 @@ set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
 set pastetoggle=<F2>
 
 " Set Toggle spell check
-map <F4> :setlocal spell! spelllang=en_us<CR>
+nnoremap <F4> :set spell! spelllang=en_us<CR>
 
 " Set Toggle textwidth
 let g:toggleText=0
