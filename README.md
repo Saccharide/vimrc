@@ -4,7 +4,7 @@ This is my personal vimrc file ~
 
 ### How to Download
 ```
-$ git clone https://github.com/saccharide/vimrc.git
+git clone https://github.com/saccharide/vimrc.git
 ```                                                                      
 Enjoy :)
 

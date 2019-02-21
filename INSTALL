@@ -1,0 +1,11 @@
+#!/bin/bash
+##################################################################################################
+# '''
+# // @Project      Install all of the dot files instead manually install every file (Simple)
+# // @Author       Saccharide
+# '''
+##################################################################################################
+
+cp .*rc $HOME
+cp -R .vim $HOME
+mv $HOME/.vim/bundle_temp $HOME/.vim/bundle
