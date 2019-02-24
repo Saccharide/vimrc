@@ -6,6 +6,15 @@
 # '''
 ##################################################################################################
 
-cp .*rc $HOME
+# Check if vimrc and bashrc exists, and make backup of them before override
+if [ -f $HOME/.vimrc ]; then
+    echo "Backing up vimrc ..."
+    mv $HOME/.vimrc .vimrc_backup
+fi
+if [ -d $HOME/.vim ]; then
+    echo "Backing up .vim ..."
+    mv $HOME/.vim .vim_backup
+fi
+cp .vimrc $HOME
 cp -R .vim $HOME
 mv $HOME/.vim/bundle_temp $HOME/.vim/bundle

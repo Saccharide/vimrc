@@ -2,9 +2,13 @@
 
 This is my personal vimrc file ~
 
-### How to Download
-```
+## How to Download
+```bash
 git clone https://github.com/saccharide/vimrc.git
+```                                                                      
+## How to Install
+```bash
+./INSTALL
 ```                                                                      
 Enjoy :)
 
