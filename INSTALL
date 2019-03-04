@@ -6,6 +6,7 @@
 # '''
 ##################################################################################################
 
+sudo apt install build-essential cmake python3-dev
 # Check if vimrc and bashrc exists, and make backup of them before override
 if [ -f $HOME/.vimrc ]; then
     echo "Backing up vimrc ..."
@@ -18,3 +19,7 @@ fi
 cp .vimrc $HOME
 cp -R .vim $HOME
 mv $HOME/.vim/bundle_temp $HOME/.vim/bundle
+
+# Installing YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-complete
