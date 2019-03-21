@@ -9,12 +9,22 @@
 sudo apt install build-essential cmake python3-dev
 # Check if vimrc and bashrc exists, and make backup of them before override
 if [ -f $HOME/.vimrc ]; then
+    echo "----------------------"
     echo "Backing up vimrc ..."
-    mv $HOME/.vimrc .vimrc_backup
+    echo "----------------------"
+    mv $HOME/.vimrc $HOME/vimrc_backup
+    echo "----------------------"
+    echo "DONE"
+    echo "----------------------"
 fi
 if [ -d $HOME/.vim ]; then
+    echo "----------------------"
     echo "Backing up .vim ..."
-    mv $HOME/.vim .vim_backup
+    echo "----------------------"
+    mv $HOME/.vim $HOME/vim_backup
+    echo "----------------------"
+    echo "DONE"
+    echo "----------------------"
 fi
 cp .vimrc $HOME
 cp -R .vim $HOME
