@@ -228,6 +228,7 @@ source ~/.vim/bundle/closetag/closetag.vim
 " endfunction
 " autocmd BufRead,BufNewFile *.html,*.js,*.xml call s:CompleteTags()
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " enable filetype detection:
 filetype on
 filetype plugin on
