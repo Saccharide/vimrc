@@ -12,7 +12,7 @@ if [ -f $HOME/.vimrc ]; then
     echo "----------------------"
     echo "Backing up vimrc ..."
     echo "----------------------"
-    mv $HOME/.vimrc $HOME/vimrc_backup
+    mv $HOME/.vimrc $HOME/.vimrc_backup
     echo "----------------------"
     echo "DONE"
     echo "----------------------"
@@ -21,7 +21,7 @@ if [ -d $HOME/.vim ]; then
     echo "----------------------"
     echo "Backing up .vim ..."
     echo "----------------------"
-    mv $HOME/.vim $HOME/vim_backup
+    mv $HOME/.vim $HOME/.vim_backup
     echo "----------------------"
     echo "DONE"
     echo "----------------------"
