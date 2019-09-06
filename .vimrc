@@ -38,7 +38,8 @@ inoremap # X#
 " Leader configs
 let mapleader = ","
 noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
-
+nnoremap <Leader>q ciw``<Esc>P
+nnoremap <Leader>Q ciW``<Esc>P
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Non invasive cursor highlight
