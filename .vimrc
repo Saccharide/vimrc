@@ -136,7 +136,7 @@ nnoremap : $
 " Substitute
 " nnoremap <C-s> :%s
 " nnoremap : <End>
-noremap ` ^h 
+" noremap ` ^h 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Centers the screen whenever I jump to another line
 nnoremap <C-o> <C-o>zz
