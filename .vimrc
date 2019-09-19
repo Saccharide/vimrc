@@ -12,7 +12,7 @@ set background=dark
 autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
 set title
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Automatical save before running a command
+" Automatically save before running a command
 set autowrite
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set relative and absolute number
@@ -25,11 +25,11 @@ set expandtab
 syntax on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent configs
-" Maintain exisiting indentation
+" Maintain existing indentation
 set autoindent
 set smartindent
 " set breakindent
-" Maintain indentation for warpped line
+" Maintain indentation for warped line
 set cindent
 " filetype indent on
 " FIXES auto dedent when commenting with smartindent
@@ -126,8 +126,8 @@ function! s:Center_JUMP(key)
     return a:key . (v:count > 1 ? 'zz' : '')
 endfunction
 
-noremap <silent> <expr> j <sid>Center_JUMP('gj')
-noremap <silent> <expr> k <sid>Center_JUMP('gk')
+noremap <silent> <expr> j <sid>Center_JUMP('j')
+noremap <silent> <expr> k <sid>Center_JUMP('k')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remapped to easily move around normal view
 nnoremap ; :
@@ -247,3 +247,6 @@ augroup END
 " needed, and have indentation at 8 chars to be sure that all indents are tabs
 " (despite the mappings later):
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+
+" Makes misspelled words visible on the same line!
+hi SpellBad cterm=underline
