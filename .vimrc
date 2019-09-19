@@ -37,9 +37,10 @@ inoremap # X#
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader configs
 let mapleader = ","
-noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
+" noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
 nnoremap <Leader>q ciw``<Esc>P
 nnoremap <Leader>Q ciW``<Esc>P
+noremap <Leader><space> :w<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Non invasive cursor highlight
@@ -115,6 +116,7 @@ noremap j gj
 noremap k gk
 
 noremap Y y$
+" noremap $ A
 " Select current line! (only characters)
 nnoremap vv ^vg_
 " gi already moves to last place you exited insert mode
@@ -131,7 +133,7 @@ noremap <silent> <expr> k <sid>Center_JUMP('k')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remapped to easily move around normal view
 nnoremap ; :
-nnoremap : $
+" nnoremap : $
 
 " Substitute
 " nnoremap <C-s> :%s
@@ -144,14 +146,14 @@ nnoremap <C-i> <C-i>zz
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TRAINING 
-no <up> <Nop> 
-no <down> <Nop> 
-no <left> <Nop> 
-no <right> <Nop> 
+no <up> gk
+no <down> gj
+" no <left> <Nop> 
+" no <right> <Nop> 
 
 " In insert mode, map arrow keys to no op, training 
-" ino <up> <Nop> 
-" ino <down> <Nop> 
+ino <up> <C-o>gk
+ino <down> <C-o>gj
 " ino <left> <Nop> 
 " ino <right> <Nop> 
 
