@@ -252,3 +252,22 @@ autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 " Makes misspelled words visible on the same line!
 hi SpellBad cterm=underline
+
+" Tabs!!!!
+nnoremap <silent> <Tab><Tab> :tabnew<CR>
+nnoremap <silent> <Tab>q :tabclose<CR>
+noremap <silent> <Tab>o :tabonly<CR>
+nnoremap <silent> <Tab>s :tabs<CR>
+nnoremap <silent> <Tab>l :tabnext<CR>
+nnoremap <silent> <Tab>h :tabprevious<CR>
+nnoremap <silent> <Tab><Right> :tabnext<CR>
+nnoremap <silent> <Tab><Left> :tabprevious<CR>
+nnoremap <silent> <Tab>1 :tabnext 1<CR>
+nnoremap <silent> <Tab>2 :tabnext 2<CR>
+nnoremap <silent> <Tab>3 :tabnext 3<CR>
+nnoremap <silent> <Tab>4 :tabnext 4<CR>
+nnoremap <silent> <Tab>5 :tabnext 5<CR>
+nnoremap <silent> <Tab>6 :tabnext 6<CR>
+nnoremap <silent> <Tab>7 :tabnext 7<CR>
+nnoremap <silent> <Tab>8 :tabnext 8<CR>
+nnoremap <silent> <Tab>9 :tabnext 9<CR>
