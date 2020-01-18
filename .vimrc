@@ -39,6 +39,7 @@ inoremap # X#
 let mapleader = ","
 noremap <silent> <Leader>c :noh<cr>:call clearmatches()<cr>
 nnoremap <Leader>q ciw``<Esc>P
+nnoremap <Leader>s *
 nnoremap <Leader>Q ciW``<Esc>P
 noremap <Leader><space> :w<CR>
 
