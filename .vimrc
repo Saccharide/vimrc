@@ -35,6 +35,11 @@ set cindent
 " FIXES auto dedent when commenting with smartindent
 inoremap # X#
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Case insensitive search, smart case will automatically switch to
+" case sensitive search when a capitalized letter is in the search
+" set ignorecase
+set smartcase
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader configs
 let mapleader = ","
 noremap <silent> <Leader>c :noh<cr>:call clearmatches()<cr>
@@ -96,6 +101,9 @@ set t_ZH=[3m
 set t_ZR=[23m
 highlight Comment cterm=italic
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set smart case search, if capitalized, search with case sensitive
+set smartcase
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mapping <ctrl> h,j,k,l to move between panels
 map <C-j> <C-W>j
@@ -272,3 +280,7 @@ nnoremap <silent> <Tab>6 :tabnext 6<CR>
 nnoremap <silent> <Tab>7 :tabnext 7<CR>
 nnoremap <silent> <Tab>8 :tabnext 8<CR>
 nnoremap <silent> <Tab>9 :tabnext 9<CR>
+
+
+" Gets rid of 'Thanks for flying vim message'
+let &titleold=getcwd()
