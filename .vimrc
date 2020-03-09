@@ -262,10 +262,14 @@ autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 " Makes misspelled words visible on the same line!
 hi SpellBad cterm=underline
 
+" Indentation shortcuts in normal mode :P
+nnoremap <silent> <Tab><Tab> >>
+nnoremap <silent> `` <<
+
 " Tabs!!!!
-nnoremap <silent> <Tab><Tab> :tabnew<CR>
+nnoremap <silent> <Leader><Tab> :tabnew<CR>
 nnoremap <silent> <Tab>q :tabclose<CR>
-noremap <silent> <Tab>o :tabonly<CR>
+nnoremap <silent> <Tab>o :tabonly<CR>
 nnoremap <silent> <Tab>s :tabs<CR>
 nnoremap <silent> <Tab>l :tabnext<CR>
 nnoremap <silent> <Tab>h :tabprevious<CR>
@@ -284,3 +288,19 @@ nnoremap <silent> <Tab>9 :tabnext 9<CR>
 
 " Gets rid of 'Thanks for flying vim message'
 let &titleold=getcwd()
+
+" Set syntax highlighting for solidity
+augroup sol_ft
+  au!
+  autocmd BufNewFile,BufRead *.sol   set syntax=javascript
+augroup END
+
+
+""" Persistent Undo !
+set undofile
+set undodir=$HOME/.vimtmp
+set undolevels=9999
+set history=9999
+
+""" Scroll the page util 3 lines left
+set scrolloff=3
