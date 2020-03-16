@@ -28,6 +28,8 @@ if [ -d $HOME/.vim ]; then
 fi
 cp .vimrc $HOME
 cp -R .vim $HOME
+echo "Creating .vimtmp for persistent undo..."
+mkdir $HOME/.vimtmp
 mv $HOME/.vim/bundle_temp $HOME/.vim/bundle
 
 # Installing YouCompleteMe
