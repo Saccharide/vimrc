@@ -37,7 +37,8 @@ inoremap # X#
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Case insensitive search, smart case will automatically switch to
 " case sensitive search when a capitalized letter is in the search
-" set ignorecase
+" Smartcase is only active when ignore case is set... 
+set ignorecase
 set smartcase
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader configs
