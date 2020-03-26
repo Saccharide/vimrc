@@ -103,9 +103,6 @@ set t_ZR=[23m
 highlight Comment cterm=italic
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set smart case search, if capitalized, search with case sensitive
-set smartcase
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mapping <ctrl> h,j,k,l to move between panels
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -305,3 +302,10 @@ set history=9999
 
 """ Scroll the page util 3 lines left
 set scrolloff=3
+
+""" Set default yank/paste to system clipboard
+set clipboard=unnamedplus
+
+""" Aliasing yank to use system clipbaord manually, require to have +clipbobard, `sudo apt install vim-gtk`
+" noremap <Leader>y "+y
+" noremap <Leader>p "+p
