@@ -309,3 +309,13 @@ set clipboard=unnamedplus
 """ Aliasing yank to use system clipbaord manually, require to have +clipbobard, `sudo apt install vim-gtk`
 " noremap <Leader>y "+y
 " noremap <Leader>p "+p
+
+""" Link Windows clipboard when using WSL
+let s:clip = '/mnt/c/Windows/System32/clip.exe' 
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+    augroup END
+end
+
