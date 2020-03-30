@@ -309,3 +309,7 @@ set clipboard=unnamedplus
 """ Aliasing yank to use system clipbaord manually, require to have +clipbobard, `sudo apt install vim-gtk`
 " noremap <Leader>y "+y
 " noremap <Leader>p "+p
+
+set lazyredraw
+set showcmd
+set wildmenu
