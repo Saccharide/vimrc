@@ -317,6 +317,10 @@ set clipboard=unnamedplus
 " noremap <Leader>y "+y
 " noremap <Leader>p "+p
 
+set lazyredraw
+set showcmd
+set wildmenu
+
 """ Link Windows clipboard when using WSL
 let s:clip = '/mnt/c/Windows/System32/clip.exe' 
 if executable(s:clip)
@@ -325,4 +329,3 @@ if executable(s:clip)
         autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
     augroup END
 end
-
