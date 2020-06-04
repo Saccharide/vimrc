@@ -6,9 +6,16 @@
 " Environment Setup
 execute pathogen#infect()
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-
+let g:airline#extensions#clock#format = '%H:%M:%S'
+let g:airline#extensions#clock#updatetime = 1000
+let g:airline#extensions#clock#auto = 0
+function! AirlineInit()
+      let g:airline_section_z = airline#section#create(['clock', g:airline_symbols.space, g:airline_section_z])
+  endfunction
+autocmd User AirlineAfterInit call AirlineInit()
 set nocompatible
 set background=dark
+let g:airline#extensions#tabline#enabled = 1
 autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
 set title
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
