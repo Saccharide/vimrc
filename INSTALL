@@ -28,10 +28,15 @@ if [ -d $HOME/.vim ]; then
 fi
 cp .vimrc $HOME
 cp -R .vim $HOME
-echo "Creating .vimtmp for persistent undo..."
+echo "[+] Creating .vimtmp for persistent undo..."
 mkdir $HOME/.vimtmp
 mv $HOME/.vim/bundle_temp $HOME/.vim/bundle
 
 # Installing YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-complete
+
+echo "[+] Adding saccharide.vim to colorscheme directory"
+sudo cp saccharide.vim /usr/share/vim/vim80/colors/
+
+echo "[+] Success."
