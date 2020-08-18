@@ -1,8 +1,8 @@
 " local syntax file - set colors on a per-machine basis:
 " vim: tw=0 ts=4 sw=4
 " Vim color file
-" Maintainer:	saccharide
-" Last Change:	2020 August 18
+" Maintainer:	Ron Aaron <ron@ronware.org>
+" Last Change:	2013 May 24
 
 set background=dark
 hi clear
@@ -50,18 +50,19 @@ hi diffOnly	guifg=red gui=bold
 hi String term=underline  cterm=bold ctermfg=magenta  guifg=#ffa0a0
 hi Number guifg=#AE81FF ctermfg=141
 hi LineNr guifg=#FFFFFF ctermfg=15 guibg=#000000 ctermbg=0 gui=underline
-"hi SpecialChar term=bold  cterm=bold ctermfg=red  guifg=Orange
-"hi SpecialKey     term=bold  cterm=bold  ctermfg=darkred  guifg=Blue
 hi special term=bold  cterm=bold ctermfg=red  guifg=Orange
-" Really nice blue
+" Really nice blue, # in markdown and code block
 hi special ctermfg=12 guifg=#0000ff
-hi Title term=bold  cterm=bold  ctermfg=darkmagenta  gui=bold  guifg=Magenta
+
+" title in markdown
+hi Title term=bold  cterm=bold  ctermfg=201 gui=bold  guifg=Magenta
 
 " Statement red and * red in md
 hi Statement guifg=#C01414 ctermfg=1 gui=none
 
 hi Function guifg=#A6E22E ctermfg=118 ctermfg=154
-" hi Function guifg=#C01414 ctermfg=1 gui=none ctermfg=darkcyan
+" hi Function guifg=#C01414 ctermfg=1 gui=none
+"ctermfg=darkcyan
 "hi Visual		ctermfg=7		ctermbg=238		cterm=none		guifg=#f6f3e8	guibg=#444444	gui=none
 "hi Normal		ctermfg=254		ctermbg=234		cterm=none		guifg=#f6f3e8	guibg=#242424	gui=none
 
