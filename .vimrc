@@ -1,3 +1,4 @@
+set t_u7=
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " @title            .vimrc
 " @description      Personal vimrc file
@@ -15,6 +16,7 @@ function! AirlineInit()
 autocmd User AirlineAfterInit call AirlineInit()
 set nocompatible
 set background=dark
+colorscheme saccharide
 let g:airline#extensions#tabline#enabled = 1
 autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
 set title
@@ -96,6 +98,7 @@ nmap     G Gzz
 nmap     } }zz
 nmap     } {zz
 
+nnoremap * *N
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 set foldmethod=indent   
@@ -188,6 +191,7 @@ function UpdateWordCount()
 	endwhile
 	let g:word_count = n
 endfunction
+
 
 " Update the count when cursor is idle in command or insert mode.
 " Update when idle for 1000 msec (default is 4000 msec).
@@ -311,7 +315,7 @@ set history=9999
 set scrolloff=3
 
 """ Set default yank/paste to system clipboard
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 
 """ Aliasing yank to use system clipbaord manually, require to have +clipbobard, `sudo apt install vim-gtk`
 " noremap <Leader>y "+y
