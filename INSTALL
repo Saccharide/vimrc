@@ -37,6 +37,6 @@ cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-complete
 
 echo "[+] Adding saccharide.vim to colorscheme directory"
-sudo cp saccharide.vim /usr/share/vim/vim80/colors/
+cp saccharide.vim ~/.vim/colors/
 
 echo "[+] Success."
