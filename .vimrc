@@ -114,10 +114,15 @@ highlight Comment cterm=italic
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mapping <ctrl> h,j,k,l to move between panels
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+" map <C-j> <C-W>j
+" map <C-k> <C-W>k
+" map <C-h> <C-W>h
+" map <C-l> <C-W>l
+
+"map J <C-W>j
+map K <C-W>k
+map H <C-W>h
+map L <C-W>l
 
 " Splits below and split right instead of the default
 set splitbelow
@@ -253,7 +258,7 @@ source ~/.vim/bundle/closetag/closetag.vim
 " enable filetype detection:
 filetype on
 filetype plugin on
-filetype indent on " file type based indentation
+"filetype indent on " file type based indentation COMMENT THIS OUT, it CAUSES LAGS when entering a newline
 
 " recognize anything in my .Postponed directory as a news article, and anything
 " at all with a .txt extension as being human-language text [this clobbers the
@@ -315,7 +320,7 @@ set history=9999
 set scrolloff=3
 
 """ Set default yank/paste to system clipboard
-" set clipboard=unnamedplus
+set clipboard=unnamedplus
 
 """ Aliasing yank to use system clipbaord manually, require to have +clipbobard, `sudo apt install vim-gtk`
 " noremap <Leader>y "+y
@@ -333,3 +338,7 @@ if executable(s:clip)
         autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
     augroup END
 end
+
+" Map Control + B to be auto complete prev, had to do this to remove conflict for tmux
+inoremap <C-B> <C-P>
+
