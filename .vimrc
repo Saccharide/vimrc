@@ -342,3 +342,6 @@ end
 " Map Control + B to be auto complete prev, had to do this to remove conflict for tmux
 inoremap <C-B> <C-P>
 
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>  
