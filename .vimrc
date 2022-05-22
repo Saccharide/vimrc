@@ -303,13 +303,6 @@ nnoremap <silent> <Tab>9 :tabnext 9<CR>
 " Gets rid of 'Thanks for flying vim message'
 let &titleold=getcwd()
 
-" Set syntax highlighting for solidity
-augroup sol_ft
-  au!
-  autocmd BufNewFile,BufRead *.sol   set syntax=javascript
-augroup END
-
-
 """ Persistent Undo !
 set undofile
 set undodir=$HOME/.vimtmp
@@ -353,3 +346,15 @@ let g:python_highlight_all = 1
 nnoremap <F12> :Black<CR>
 " Uncomment the line below to run black whenever we save the file
 " autocmd BufWritePre *.py execute ':Black'
+
+" Run Black on save, can turn it off to make it so that it only runs when f12
+" augroup black_on_save
+"   autocmd!
+"   autocmd BufWritePre *.py Black
+" augroup end
+"
+let g:ale_linters = {'python': ['flake8']}
+" let g:ale_linters = {'python': ['black']}
+
+" Remap :` to :sav for easy saveas
+cmap ` sav
