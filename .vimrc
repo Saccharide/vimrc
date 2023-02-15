@@ -44,6 +44,8 @@ set cindent
 " filetype indent on
 " FIXES auto dedent when commenting with smartindent
 inoremap # X#
+" Get yank notification for even 1 line yank
+set report=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Case insensitive search, smart case will automatically switch to
 " case sensitive search when a capitalized letter is in the search
