@@ -50,6 +50,11 @@ git clone https://github.com/easymotion/vim-easymotion
 echo "Adding python syntax highlighting for vim"
 git clone https://github.com/vim-python/python-syntax
 
+echo "Adding vscode color scheme... Much better than my own haha"
+mkdir -p ~/.vim/pack/themes/start
+cd ~/.vim/pack/themes/start
+git clone https://github.com/tomasiser/vim-code-dark
+
 echo "Installing black"
 pip install black
 mkdir -p ~/.vim/pack/python/start/black/plugin

@@ -16,7 +16,8 @@ function! AirlineInit()
 autocmd User AirlineAfterInit call AirlineInit()
 set nocompatible
 set background=dark
-colorscheme saccharide
+" colorscheme saccharide
+colorscheme codedark
 let g:airline#extensions#tabline#enabled = 1
 autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
 set title
